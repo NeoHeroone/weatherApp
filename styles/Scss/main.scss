@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #4b4a4a, #1b1b1b);
+
+  .light-mode:active *{
+    background: #D9D9D9;
+    color: #111111;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1512px;
+  padding: 63px 78px;
+}
+
+input {
+  color: white;
+  font-size: 20px;
+  &:focus {
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 5px transparent;
+  }
+}
+
+
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .lightDark-box{
+      .light-Dark{
+        background: #D9D9D9;
+        border-radius: 50px;
+        padding: 5px 5px;
+        width: 100px;
+        height: 40px;
+        .dark-Light{
+          background: #111111;
+          border-radius: 100%;
+          width: 30px;
+          height: 30px;
+          transform: translateX(60px);
+        }
+        .dark{
+          transform: translateX(0);
+        }
+      }
+      .dark_light{
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 27px;
+        color: #fff;
+      }
+    }
+    button {
+      gap: 8px;
+      border: none;
+      display: flex;
+      padding: 14px 28px;
+      border-radius: 40px;
+      align-items: center;
+      background: #4cbb17;
+      span {
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 33px;
+        color: #ffffffcc;
+        box-shadow: #00000040;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    form {
+      gap: 29px;
+      display: flex;
+      padding: 8px 33px;
+      align-items: center;
+      box-shadow: 5px 5px 10px #00000040;
+      border-radius: 1000px;
+      input {
+        background: transparent;
+        border: none;
+        width: 641px;
+        height: 28px;
+
+        &::placeholder {
+          font-family: "Poppins", sans-serif;
+          font-size: 18px;
+          line-height: 27px;
+          letter-spacing: 1px;
+          color: #ffffff99;
+        }
+      }
+    }
+  }
+}
+.card {
+  background: #444444;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px #00000080;
+}
+main {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .card1 {
+      color: #ffffff;
+      padding: 48px 147px 48px 147px;
+      text-align: center;
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 54px;
+      }
+      p {
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 144px;
+        margin-top: 29px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+
+    .card2 {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      padding: 15px 0 0 24px;
+      color: #ffffff;
+      text-align: center;
+
+      .box1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        .temp {
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 120px;
+          background: linear-gradient(to right, #fff, #ffffff00);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .feelsLike {
+          span {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 48px;
+            color: #ffffffcc;
+          }
+        }
+        .mini-box_content {
+          margin-top: 26px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-direction: column;
+
+          .mini-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .sun-text {
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 30px;
+            }
+
+            .sun-watch {
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 24px;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+
+      .box2 {
+        margin: -20px 9px 17px 26px;
+        .weather-about {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 48px;
+        }
+      }
+
+      .box3 {
+        display: grid;
+        align-items: start;
+        grid-template-columns: auto auto;
+        gap: 17px;
+        padding: 26px 10px;
+
+        .weather {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 9px;
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+
+        .weather2 {
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+}
+footer {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .card-footer1 {
+      padding: 18px 16px 0 20px;
+    }
+    .sunWeather {
+      width: 60px;
+      height: 60px;
+    }
+    .card {
+      color: white;
+      .card-footer_title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
+      }
+
+      .box-footer_content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .box-footer {
+          display: flex;
+          align-items: center;
+          gap: 42px;
+
+          .temperature {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: center;
+          }
+
+          .weekDay {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .card-footer2 {
+      padding: 13px 80px 16px 80px;
+
+      .cardf2-box_content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #ffffff;
+
+        .cardf2-box {
+          background: #373636;
+          border-radius: 40px;
+          padding: 13px 28px 18px 33px;
+          text-align: center;
+
+          .navigation-weather1 {
+            transform: rotate(-30deg);
+            margin-left: -20px;
+          }
+          .navigation-weather2 {
+            transform: rotate(30deg);
+            margin-left: 10px;
+          }
+
+          .oclock-weather {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+          }
+
+          .weather-darf2 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+          }
+
+          .weather-speed {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
