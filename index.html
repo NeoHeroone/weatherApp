@@ -21,10 +21,10 @@
           <p class="dark_light">Dark Mode</p>
         </div>
         <form>
-          <img src="./images/icons/search.svg" alt="" />
-          <input type="text" placeholder="Search for your preffered city..." />
+          <img id="searchButton" src="./images/icons/search.svg" alt="" />
+          <input id="cityInput" type="text" placeholder="Search for your preffered city..." />
         </form>
-        <button>
+        <button class="currentLocation">
           <img src="./images/icons/location.svg" alt="" />
           <span>Current Location</span>
         </button>
@@ -46,14 +46,16 @@
             <p class="feelsLike">Feels like: <span>22°C</span></p>
             <div class="mini-box_content">
               <div class="mini-box">
-                <img src="./images/icons/sunrise-white.svg" alt="" />
+                <img class="displayN" src="./images/icons/sunrise-white.svg" alt="" />
+                <img class="displayB" src="./images/icons/sunrise-black.svg" alt="" />
                 <div class="sunrise-text">
                   <span class="sun-text">Sunrise</span>
                   <p class="sun-watch">06:37 AM</p>
                 </div>
               </div>
               <div class="mini-box">
-                <img src="./images/icons/sunriseDown.svg" alt="" />
+                <img class="displayN" src="./images/icons/sunriseDown.svg" alt="" />
+                <img class="displayB" src="./images/icons/sunset-black.svg" alt="" />
                 <div class="sunrise-text">
                   <span class="sun-text">Sunset</span>
                   <p class="sun-watch">06:37 AM</p>
@@ -67,22 +69,26 @@
           </div>
           <div class="box3 box">
             <div class="weather1 weather">
-              <img src="./images/icons/humidity.svg" alt="" />
+              <img class="displayN" src="./images/icons/humidity.svg" alt="" />
+              <img class="displayB" src="./images/icons/humidity-black.svg" alt="" />
               <span>41%</span>
               <p>Humidity</p>
             </div>
             <div class="weather2 weather">
-              <img src="./images/icons/windSpeed.svg" alt="" />
+              <img class="displayN" src="./images/icons/windSpeed.svg" alt="" />
+              <img class="displayB" src="./images/icons/wind-black.svg" alt="" />
               <span>2km/h</span>
               <p>Wind Speed</p>
             </div>
             <div class="weather3 weather">
-              <img src="./images/icons/pressure-white.svg" alt="" />
+              <img class="displayN" src="./images/icons/pressure-white.svg" alt="" />
+              <img class="displayB" src="./images/icons/pressure-black.svg" alt="" />
               <span>997hPa</span>
               <p>Pressure</p>
             </div>
             <div class="weather4 weather">
-              <img src="./images/icons/uv-white.svg" alt="" />
+              <img class="displayN" src="./images/icons/uv-white.svg" alt="" />
+              <img class="displayB" src="./images/icons/uv-black.svg" alt="" />
               <span>8</span>
               <p>UV</p>
             </div>
@@ -94,7 +100,7 @@
     <footer>
       <div class="container">
         <div class="card-footer1 card">
-          <h2 class="card-footer_title">5 Days Forecast:</h2>
+          <h2 class="card-footer_title forecast">5 Days Forecast:</h2>
           <div class="box-footer_content">
             <div class="box-footer">
               <img src="./images/icons/cloudy.svg" alt="">
@@ -166,6 +172,6 @@
       </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

@@ -7,14 +7,82 @@
   font-family: "Poppins", sans-serif;
 }
 
+.displayN {
+  position: relative;
+  display: none;
+}
+
+.displayB {
+  position: relative;
+  display: none;
+}
+
 body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to right, #4b4a4a, #1b1b1b);
+  transition: all 0.5s ease-in-out;
+  color: #ffffff;
 }
-body .light-mode:active * {
-  background: #D9D9D9;
-  color: #111111;
+body.light-mode {
+  background: linear-gradient(to left, #838383, rgba(70, 97, 115, 0)) !important;
+  color: #111111 !important;
+}
+body.light-mode .card {
+  background: #d9d9d9 !important;
+  color: #292929 !important;
+}
+body.light-mode .currentLocation {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2509803922);
+}
+body.light-mode .cardf2-box {
+  background: linear-gradient(to bottom, #F88508, rgba(246, 250, 217, 0)) !important;
+  color: #292929 !important;
+}
+body.light-mode .cardf2-box:nth-child(4), body.light-mode .cardf2-box:nth-child(5) {
+  background: linear-gradient(to bottom, #443D64, rgba(101, 130, 198, 0.3019607843)) !important;
+}
+body.light-mode .temp {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6509803922), #bebebe) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+body.light-mode .feelsLike span {
+  color: #292929 !important;
+}
+body.light-mode form {
+  border: 1px solid #111111;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2509803922);
+}
+body.light-mode form input {
+  color: #373636;
+}
+body.light-mode form input::-moz-placeholder {
+  color: #292929 !important;
+}
+body.light-mode form input::placeholder {
+  color: #292929 !important;
+}
+
+.light-Dark {
+  background: #d9d9d9;
+  border-radius: 50px;
+  padding: 5px 5px;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.light-Dark .dark-Light {
+  background: #111111;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  transform: translateX(60px);
+  transition: all 0.3s ease;
+}
+.light-Dark .dark {
+  transform: translateX(0);
 }
 
 .container {
@@ -40,7 +108,7 @@ header .container {
   justify-content: space-between;
 }
 header .container .lightDark-box .light-Dark {
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 50px;
   padding: 5px 5px;
   width: 100px;
